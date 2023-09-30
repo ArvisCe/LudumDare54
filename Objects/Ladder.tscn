@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6bjv3megi8gl"]
+
+[ext_resource type="Texture2D" uid="uid://bw4mv7g0hnvc8" path="res://sprites/ladder.png" id="1_jh68w"]
+[ext_resource type="Script" path="res://scripts/Ladder.gd" id="1_yiuc2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fa7s5"]
+size = Vector2(14, 2)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 512
+collision_mask = 512
+script = ExtResource("1_yiuc2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_jh68w")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_fa7s5")
+one_way_collision = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_fa7s5")
+one_way_collision = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_fa7s5")
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_fa7s5")
+one_way_collision = true
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_fa7s5")
+one_way_collision = true
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_fa7s5")
+one_way_collision = true
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_fa7s5")
+one_way_collision = true
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
+position = Vector2(0, 13)
+shape = SubResource("RectangleShape2D_fa7s5")
+one_way_collision = true

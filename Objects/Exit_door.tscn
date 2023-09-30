@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5o0tvcv6rmux"]
+
+[ext_resource type="Script" path="res://Objects/Exit_door.gd" id="1_84bjx"]
+[ext_resource type="Texture2D" uid="uid://bd52ovo5b3lxu" path="res://sprites/exit_door.png" id="1_q88rp"]
+[ext_resource type="Texture2D" uid="uid://c1nymifhvg4e5" path="res://UI/Leave_level_text.png" id="3_1p1s6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ytgiq"]
+radius = 14.0
+height = 42.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ylrso"]
+size = Vector2(23, 4)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_84bjx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_q88rp")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ytgiq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 14)
+shape = SubResource("RectangleShape2D_ylrso")
+one_way_collision = true
+
+[node name="Leave_text" type="Sprite2D" parent="."]
+z_index = 100
+texture_filter = 1
+position = Vector2(1, -4)
+texture = ExtResource("3_1p1s6")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

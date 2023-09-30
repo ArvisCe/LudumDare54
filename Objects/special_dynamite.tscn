@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://doj8u4oaeyw8j"]
+
+[ext_resource type="Script" path="res://Objects/special_dynamite.gd" id="1_xupr1"]
+[ext_resource type="PackedScene" uid="uid://ceqxsqlk5w10n" path="res://Objects/dynamite.tscn" id="2_g1708"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 512
+collision_mask = 512
+script = ExtResource("1_xupr1")
+
+[node name="RigidBody2D" parent="." instance=ExtResource("2_g1708")]
+modulate = Color(0, 0, 0.992157, 1)
+script = null

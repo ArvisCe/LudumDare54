@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnptu7he82dri"]
+
+[ext_resource type="Texture2D" uid="uid://pdc3kcoj3avf" path="res://sprites/cave_background.png" id="1_1ji66"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xl3q"]
+size = Vector2(32, 32)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.380392, 0.380392, 0.380392, 1)
+light_mask = 524289
+visibility_layer = 524289
+texture_filter = 1
+texture = ExtResource("1_1ji66")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5xl3q")
