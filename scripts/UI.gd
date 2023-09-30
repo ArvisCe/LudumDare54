@@ -16,7 +16,7 @@ func _process(delta):
 		get_node("Gold/Label").text = str(player.gold)
 		get_node("Rock/Label").text = str(player.stone)
 		get_node("dynamite/Label").text = str(player.ammo)
-	if Input.is_action_just_pressed("craft"):
+	if Input.is_action_just_pressed("craft") and not player.using_pickaxe:
 		crafting_ui = !crafting_ui
 		craft()
 	pass 

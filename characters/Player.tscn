@@ -76,7 +76,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mewdr"]
-size = Vector2(10, 9)
+size = Vector2(10, 19.3357)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(0.8, 0.8)
@@ -101,7 +101,7 @@ position = Vector2(-1, -2)
 position = Vector2(0, 7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6.635)
+position = Vector2(0, 3.0175)
 scale = Vector2(0.7, 0.7)
 shape = SubResource("RectangleShape2D_mewdr")
 

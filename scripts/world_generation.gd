@@ -11,7 +11,7 @@ var tiles = [
 
 @export var tile_size = 8
 
-@export var world_radius = 80
+@export var world_radius = 50
 
 var world = []
 var generated = false

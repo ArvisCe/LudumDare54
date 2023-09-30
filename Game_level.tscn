@@ -46,9 +46,7 @@ z_index = 1
 collision_layer = 513
 collision_mask = 513
 speed = 60.0
-jump_power = -250
-gravity_strength = 2
-ammo = 20
+jump_power = -125
 
 [node name="UI" type="Control" parent="CharacterBody2D"]
 z_index = 100

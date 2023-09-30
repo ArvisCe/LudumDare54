@@ -8,7 +8,7 @@ var dynamite_cooldown = 0
 var dynamite_cooldown_reset = 1.5
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var throwing = false
-
+var using_pickaxe = false
 @export var stone = 0
 @export var diamond = 0
 @export var gold = 0
